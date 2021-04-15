@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.3 on win32)" generated="20200608 12:23:36.814" rpa="false">
+<suite id="s1" name="Tmp4Zwlnril" source="C:\Users\draus\AppData\Local\Temp\tmp4zwlnril">
+<test id="s1-t1" name="SOME TEST">
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<status status="NOT_RUN" starttime="20200608 12:23:36.865" endtime="20200608 12:23:36.865"></status>
+</kw>
+<kw name="Get Element Count">
+<arguments>
+<arg>name:div_name</arg>
+</arguments>
+<assign>
+<var>${count} =</var>
+</assign>
+<msg timestamp="20200608 12:23:36.868" level="FAIL">No keyword with name 'Get Element Count' found.</msg>
+<status status="FAIL" starttime="20200608 12:23:36.868" endtime="20200608 12:23:36.868"></status>
+</kw>
+<kw name="Debug If" library="DebugLibrary">
+<doc>Runs the Debug keyword if condition is true.</doc>
+<arguments>
+<arg>${count} &lt; 1</arg>
+</arguments>
+<status status="NOT_RUN" starttime="20200608 12:23:36.868" endtime="20200608 12:23:36.868"></status>
+</kw>
+<status status="FAIL" starttime="20200608 12:23:36.865" endtime="20200608 12:23:36.868" critical="yes">No keyword with name 'Get Element Count' found.</status>
+</test>
+<status status="FAIL" starttime="20200608 12:23:36.815" endtime="20200608 12:23:36.869"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Tmp4Zwlnril">Tmp4Zwlnril</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

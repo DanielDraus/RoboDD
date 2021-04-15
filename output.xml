@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.3 on win32)" generated="20200608 12:19:50.426" rpa="false">
+<suite id="s1" name="Tmp4Zwlnril" source="C:\Users\draus\AppData\Local\Temp\tmp4zwlnril">
+<test id="s1-t1" name="SOME TEST">
+<kw name="Debug" library="DebugLibrary">
+<doc>Open a interactive shell, run any RobotFramework keywords.</doc>
+<kw name="SOME_TEST">
+<msg timestamp="20200608 12:20:06.191" level="FAIL">No keyword with name 'SOME_TEST' found.</msg>
+<status status="FAIL" starttime="20200608 12:20:06.191" endtime="20200608 12:20:06.192"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<status status="PASS" starttime="20200608 12:20:31.708" endtime="20200608 12:20:31.709"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${bla}</arg>
+</arguments>
+<msg timestamp="20200608 12:20:42.791" level="INFO">2</msg>
+<status status="PASS" starttime="20200608 12:20:42.790" endtime="20200608 12:20:42.791"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${bla}</arg>
+<arg>console=1</arg>
+</arguments>
+<msg timestamp="20200608 12:20:49.287" level="INFO">2</msg>
+<status status="PASS" starttime="20200608 12:20:49.286" endtime="20200608 12:20:49.287"></status>
+</kw>
+<kw name="EXIT">
+<msg timestamp="20200608 12:21:15.824" level="FAIL">No keyword with name 'EXIT' found.</msg>
+<status status="FAIL" starttime="20200608 12:21:15.823" endtime="20200608 12:21:15.824"></status>
+</kw>
+<status status="PASS" starttime="20200608 12:19:50.922" endtime="20200608 12:21:18.145"></status>
+</kw>
+<kw name="Get Element Count">
+<arguments>
+<arg>name:div_name</arg>
+</arguments>
+<assign>
+<var>${count} =</var>
+</assign>
+<msg timestamp="20200608 12:21:18.152" level="FAIL">No keyword with name 'Get Element Count' found.</msg>
+<status status="FAIL" starttime="20200608 12:21:18.151" endtime="20200608 12:21:18.152"></status>
+</kw>
+<status status="FAIL" starttime="20200608 12:19:50.921" endtime="20200608 12:21:18.152" critical="yes">No keyword with name 'Get Element Count' found.</status>
+</test>
+<status status="FAIL" starttime="20200608 12:19:50.430" endtime="20200608 12:21:18.156"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Tmp4Zwlnril">Tmp4Zwlnril</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

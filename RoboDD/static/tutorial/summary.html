@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary</title>
+</head>
+<body>
+<a href=#robot>What is the Robot Framework In Python?</a><ul><li><a href=#arch>Robot Framework Architecture</a></li><li><a href=#install>Installation</a></li></ul></li><li><a href=#lib>Standard Libraries</a></li><li><a href=#tools>Built-in Tools</a></li><li><a href=#testcase>Test Cases</a><ul><li><a href=#workflow>Workflow Tests</a></li><li><a href=#higher>Higher-Level Tests</a></li><li><a href=#data-driven>Data-Driven Tests</a></li></ul></li><li><a href=#key>Keywords</a><ul><li><a href=#libkey>Library Keywords</a></li><li><a href=#userkey>User Keywords</a></li></ul></li><li><a href=#var>Variables</a><ul><li><a href=#defvar>Defining Variables</a></li><li><a href=#usevar>Using Variables</a></li></ul></li><li><a href=#org>Organizing Test Cases</a></li><li><a href=#selenium>RobotFramework-Selenium Library</a><ul><li><a href=#installation>Installation</a></li><li><a href=#drivers>Browser Drivers</a></li></ul></li><li><a href=#usecase>Use Case &#8211; Web Testing With Robot Framework And SeleniumLibrary</a></li></ul><h2><strong><a name=robot></a>What Is The&nbsp; Robot Framework?</strong></h2><p style="text-align: justify;">Robot framework is a generic open-source automation framework for <a rel="noopener noreferrer" href=https://www.edureka.co/blog/acceptance-testing/ target=_blank>acceptance testing</a>, acceptance test-driven development, and <a rel="noopener noreferrer" href=https://www.edureka.co/blog/robotic-process-automation/ target=_blank>robotic process automation</a>. It uses the keyword-driven testing technique approach. The capabilities can be extended by test libraries that can be implemented by either <a rel="noopener noreferrer" href=https://www.edureka.co/blog/java-tutorial target=_blank>Java</a> or <a rel="noopener noreferrer" href=https://www.edureka.co/blog/python-programming-language target=_blank>Python</a>.</p><p><strong>Acceptance Testing&nbsp;</strong></p><p style="text-align: justify;">It is a testing technique in which the capability of a system is tested. The purpose of <a rel="noopener noreferrer" href=https://www.edureka.co/blog/acceptance-testing/ target=_blank>acceptance testing</a> is to evaluate the capabilities of a system in accordance with the business requirements.</p><p><strong>Acceptance Test-Driven Development</strong></p><p style="text-align: justify;">ATDD or acceptance test-driven development is a development methodology that is based on the communication between business customers, developers, and testers. They work in coordination and make acceptance tests in advance of implementing the functionality.</p><p><strong>Robotic Process Automation</strong></p><p style="text-align: justify;"><a name=arch></a>RPA or <a rel="noopener noreferrer" href=https://www.edureka.co/blog/rpa-projects target=_blank>robotic process automation</a> is the process of conveniently reducing human effort in resonance with software that uses machine learning and AI capabilities. RPA handles high-level repeatable tasks.</p><h3><strong>Robot Framework Architecture</strong></h3><p style="text-align: justify;">The robot framework is platform-independent, Although the core framework is implemented using python it can also run on <a rel="noopener noreferrer" href=https://www.edureka.co/blog/java-virtual-machine/ target=_blank>JPython</a>(JVM) and IronPython(.NET).</p><h3><strong><img class="aligncenter wp-image-118309 size-full" src=/blog/wp-content/uploads/2019/10/architecture.png alt="architecture-robot framework in python-edureka" width=388 height=326 srcset="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/architecture.png 388w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/architecture-150x126.png 150w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/architecture-300x252.png 300w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/architecture-357x300.png 357w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/architecture-214x180.png 214w" sizes="(max-width: 388px) 100vw, 388px"></strong></h3><p style="text-align: justify;">The test data is in an easy-to-edit format when the process starts the framework processes the test data and generates logs and reports. The interaction is handled by the libraries which can use additional test tools as drivers to test the target.</p><h3><strong><a name=install></a>Installation</strong></h3><p style="text-align: justify;">The recommended approach to install the robot framework on python is to <a rel="noopener noreferrer" href=https://www.edureka.co/blog/how-to-install-pip-in-python/ target=_blank>use the pip</a>. You can use the following command to install the framework.</p><pre class="brush: python; title: ; notranslate" title>
+pip install robotframework
+</pre><p><strong>Verifying Installation</strong></p><p style="text-align: justify;">After the successful installation, you should be able to see both interpreter and robot framework versions using the &#8211;version option.</p><pre class="brush: python; title: ; notranslate" title>
+robot --version
+rebot --version
+</pre><h2><strong><a name=lib></a>Standard Libraries</strong></h2><p style="text-align: justify;">The following test libraries are distributed with the robot framework.</p><ul><li>BuiiltIn</li><li>Collections</li><li>DateTime</li><li>Dialogs</li><li>OperatingSystem</li><li>Process</li><li>Remote</li><li>Screenshot</li><li>String</li><li>Telnet</li><li>XML</li></ul><h2><strong><a name=tools></a>Built-in Tools</strong></h2><p style="text-align: justify;">In addition to the core test execution engine, there are some supporting tools that are built-in the robot framework. The following built-in tools are present in the robot framework in python.</p><ul><li>Rebot</li><li>Libdoc</li><li>Testdoc</li><li>Tidy</li></ul><p>Robot framework test data is defined in different sections listed below.</p><table border=1><tbody><tr><td style="width: 50%;"><strong>Section</strong></td><td style="width: 50%;"><strong>Description</strong></td></tr><tr><td style="width: 50%;"><p style="text-align: center;"><strong>Settings</strong></p></td><td style="width: 50%;">It is used for importing resource files, libraries, and variable files. Also used for defining metadata for test cases and test suites.</td></tr><tr><td style="width: 50%;"><p style="text-align: center;"><strong>Variables</strong></p></td><td style="width: 50%;">Used for defining variables that can be used elsewhere in test data.</td></tr><tr><td style="width: 50%;"><p style="text-align: center;"><strong>Test Cases</strong></p></td><td style="width: 50%;">It is used to create test cases from available keywords</td></tr><tr><td style="width: 50%;"><p style="text-align: center;"><strong>Tasks</strong></p></td><td style="width: 50%;">Used to create tasks using available keywords</td></tr><tr><td style="width: 50%;"><p style="text-align: center;"><strong>Keywords</strong></p></td><td style="width: 50%;">Creating user keywords from available lower-level keywords</td></tr><tr><td style="width: 50%;"><p style="text-align: center;"><strong>Comments</strong></p></td><td style="width: 50%;">Additional comments that are normally ignored by the framework</td></tr></tbody></table><h2><strong><a name=testcase></a>Test Cases</strong></h2><p style="text-align: justify;">The test cases can be categorized in the following tests.</p><ul><li><p style="text-align: justify;">Workflow Tests</p></li><li><p style="text-align: justify;">Higher-level Tests</p></li><li><p style="text-align: justify;">Data-driven Tests</p></li></ul><h3><strong><a name=workflow></a>Workflow Tests</strong></h3><p style="text-align: justify;">The robot framework test cases are normally written in tabular syntax. Let us take a look at the example to understand this.</p><ul><li><p style="text-align: justify;">User can create an account and log in</p></li><li><p style="text-align: justify;">User cannot log in with bad password</p></li></ul><pre class="brush: plain; title: ; notranslate" title>
+*** Test Cases ***
+User can create an account and log in
+    Create Valid User    python    P4ssw0rd
+    Attempt to Login with Credentials    python    P4ssw0rd
+    Status Should Be    Logged In
+
+User cannot log in with bad password
+    Create Valid User    pytHon    P4ssw0rd
+    Attempt to Login with Credentials    pytHon    wrong
+    Status Should Be    Access Denied
+</pre><p style="text-align: justify;">The robot framework in <a rel="noopener noreferrer" href=https://www.edureka.co/blog/python-basics/ target=_blank>python</a> follows the test cases to be written in simple English language rather than automated test cases. It follows a keyword-driven approach that resonates with natural language in terms of actions and expectations.</p><p style="text-align: justify;">The test cases are constructed with keywords and possible arguments.</p><h3><strong><a name=higher></a>Higher-Level Tests</strong></h3><p style="text-align: justify;">The test cases in the robot framework can be constructed with only high-level keywords and no positional arguments. Let us take a look at an example below to understand high-level tests.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Test Cases ***
+User can change password
+    Given a user has a valid account
+    When she changes her password
+    Then she can log in with the new password
+    And she cannot use the old password anymore
+</pre><h3><strong><a name=data-driven></a>Data-Driven Tests</strong></h3><p style="text-align: justify;">The data-driven tests allow the varying of test data without duplicating the workflow. The [Template] setting in the robot framework sets the test case into a data-driven test.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Test Cases ***
+Invalid password
+    [Template]    Creating user with invalid password should fail
+    abCD5            ${PWD INVALID LENGTH}
+    abCD56789    ${PWD INVALID LENGTH}
+    123DEFG       ${PWD INVALID CONTENT}
+    abcd56789      ${PWD INVALID CONTENT}
+    abCdEfGh      ${PWD INVALID CONTENT}
+    abCD56+        ${PWD INVALID CONTENT}
+</pre><h2><strong><a name=key></a>Keywords</strong></h2><p style="text-align: justify;">The test cases in the robot framework are created with keywords that come from two sources.</p><ul><li><p style="text-align: justify;">Library Keywords</p></li><li><p style="text-align: justify;">User Keywords</p></li></ul><h3><strong><a name=libkey></a>Library Keywords</strong></h3><p style="text-align: justify;">All the lowest level keywords are defined in the standard libraries that can be implemented using programming languages like <a rel="noopener noreferrer" href=https://www.edureka.co/blog/why-python/ target=_blank>Python</a>, <a rel="noopener noreferrer" href=https://www.edureka.co/blog/structure-of-a-java-program/ target=_blank>Java</a>, etc.</p><p style="text-align: justify;">The robot framework comes with test libraries that can be divided into standard, external and custom libraries. Standard libraries are in the core framework such as builtin, screenshot, Operatingsystem, etc. External libraries are installed separately, like seleniumlibrary for web testing.</p><p style="text-align: justify;">To use the keywords in the library, library settings must be imported. Let us take a look at an example to understand this.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Settings ***
+Library           OperatingSystem
+Library           lib/LoginLibrary.py
+</pre><h3><strong><a name=userkey></a>User Keywords</strong></h3><p style="text-align: justify;">One of the powerful features of the robot framework is that we can make custom high-level keywords using other keywords. Let&#8217;s take a look at an example to understand how it works.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Keywords ***
+Clear login database
+    Remove file    ${DATABASE FILE}
+
+Create valid user
+    [Arguments]    ${username}    ${password}
+    Create user    ${username}    ${password}
+    Status should be    SUCCESS
+
+Creating user with invalid password should fail
+    [Arguments]    ${password}    ${error}
+    Create user    example    ${password}
+    Status should be    Creating user failed: ${error}
+
+Login
+    [Arguments]    ${username}    ${password}
+    Attempt to login with credentials    ${username}    ${password}
+    Status should be    Logged In
+
+# Keywords below used by higher level tests. Notice how given/when/then/and
+# prefixes can be dropped. And this is a comment.
+
+A user has a valid account
+    Create valid user    ${USERNAME}    ${PASSWORD}
+
+She changes her password
+    Change password    ${USERNAME}    ${PASSWORD}    ${NEW PASSWORD}
+    Status should be    SUCCESS
+
+She can log in with the new password
+    Login    ${USERNAME}    ${NEW PASSWORD}
+
+She cannot use the old password anymore
+    Attempt to login with credentials    ${USERNAME}    ${PASSWORD}
+    Status should be    Access Denied
+</pre><p style="text-align: justify;">User-defined keywords can include actions provided by other user-defined keywords or library keywords as well.</p><h2><strong><a name=var></a>Variables</strong></h2><p style="text-align: justify;">The variables are a very important part of any test case in a robot framework. Any data is the test case that is subject to variability or change is best defined using a variable.</p><p>Let us take a look at how we can define variables in a test case.</p><h3><strong><a name=defvar></a>Defining Variables</strong></h3><pre class="brush: plain; title: ; notranslate" title>
+*** Variables ***
+${USERNAME}               janedoe
+${PASSWORD}               J4n3D0e
+${NEW PASSWORD}           e0D3n4J
+${DATABASE FILE}          ${TEMPDIR}${/}robotframework-quickstart-db.txt
+${PWD INVALID LENGTH}     Password must be 7-12 characters long
+${PWD INVALID CONTENT}    Password must be a combination of lowercase and uppercase letters and numbers
+</pre><p style="text-align: justify;">In addition to the user-defined variables, there are built-in variables that are present in the robot framework like ${TEMPDIR} and ${/} that we have also used in the above example.</p><h3><strong><a name=usevar></a>Using Variables</strong></h3><p style="text-align: justify;">We can use the variables anywhere in the test case, they are most commonly used as arguments in the keywords. Let us take a look at the example to understand this.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Test Cases ***
+User status is stored in database
+    [Tags]    variables    database
+    Create Valid User    ${USERNAME}    ${PASSWORD}
+    Database Should Contain    ${USERNAME}    ${PASSWORD}    Inactive
+    Login    ${USERNAME}    ${PASSWORD}
+    Database Should Contain    ${USERNAME}    ${PASSWORD}    Active
+
+*** Keywords ***
+Database Should Contain
+    [Arguments]    ${username}    ${password}    ${status}
+    ${database} =     Get File    ${DATABASE FILE}
+    Should Contain    ${database}    ${username}t${password}t${status}n
+</pre><p style="text-align: justify;">Now that we know, how we can make a test case using the keywords and variables. Let us try to understand how we are going to organize the test cases.</p><h2><strong><a name=org></a>Organizing Test Cases</strong></h2><p style="text-align: justify;">Robot test cases are created in test case files, but we can organize them into directories that create a test suite hierarchy.</p><p style="text-align: justify;">Collections of test cases are called a test suite. Every file that contains the test cases also forms a test suite. It is possible to organize the test cases in a hierarchy using the directories, all these directories create high-level test suites that get their name from directory names.</p><p><strong>Setups and Teardowns</strong></p><p style="text-align: justify;">If you want a specific keyword in a test to be executed before or after, you can use the &#8220;Test Setup&#8221; and &#8220;Test Teardown&#8221; settings in the settings table. You can also use &#8220;Suite Setup&#8221; and &#8220;Suite Teardown&#8221; to execute keywords before or after in a test suite as well.</p><p style="text-align: justify;">You can also create custom [Setup] and [Teardown] in a test case just like [Template]. Let us take a look at an example to understand this.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Settings ***
+Suite Setup       Clear Login Database
+Test Teardown     Clear Login Database
+</pre><p><strong>Using Tags</strong></p><p style="text-align: justify;">The robot framework allows tags to give the test cases free metadata. The tags can be set in a file using &#8220;Force Tags&#8221; and &#8220;Default Tags&#8221;.</p><p style="text-align: justify;">It is possible to give tags for a single test case using [Tags] just like [Template]. Let us take an example to understand how we use tags.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Settings ***
+Force Tags        quickstart
+Default Tags      example    smoke
+</pre><p style="text-align: justify;">After the execution, the report will have tags with test cases associated with them and statistics based on the tags.</p><h2><strong><a name=selenium></a>Robot Framework-Selenium Library</strong></h2><p style="text-align: justify;">The selenium library in the robot framework is a web testing library that uses the selenium tools internally. Selenium library works fine with python 2.7, 3.4 and newer versions. In addition to the standard python interpreter, it works with Pypy and JPython except for IronPython.</p><h3><strong><a name=installation></a>Installation</strong></h3><p style="text-align: justify;">To install selenium library, we can follow the typical approach using the pip in python. Use the following command to install seleniumlibrary in python.</p><pre class="brush: python; title: ; notranslate" title>
+pip install robotframework-seleniumlibrary
+</pre><h3><strong><a name=drivers></a>Browser Drivers</strong></h3><p style="text-align: justify;">After the installation is complete you still need to install relevant drivers for the operating systems and browsers that you want to use in the tests. The general approach is to install the browser driver like Chromedriver for chrome but alternatively, you can use the tool called Webdrivermanager.</p><p style="text-align: justify;">It will find the latest version when required, it will download all the links/files in the right location. It supports all major operating systems and supports downloading of browsers like chrome, opera, etc.</p><p style="text-align: justify;">You can use the following command to install WebdriverManager</p><pre class="brush: python; title: ; notranslate" title>
+pip install webdrivermanager
+webdrivermanager firefox chrome --linkpath /usr/local/bin
+</pre><p><strong>How To Use Selenium Library</strong></p><p style="text-align: justify;">To use the selenium library, it has to be imported using the &#8220;Library&#8221; setting as any other library. It is recommended to use the robot framework high-level keywords to write the test cases that use the selenium low-level keywords internally.</p><p style="text-align: justify;">Here is a simple example to show how you can use the selenium library in a test case.</p><pre class="brush: plain; title: ; notranslate" title>
+*** Settings ***
+Documentation     Simple example using SeleniumLibrary.
+Library           SeleniumLibrary
+
+*** Variables ***
+${LOGIN URL}      http://localhost:7272
+${BROWSER}        Chrome
+
+*** Test Cases ***
+Valid Login
+    Open Browser To Login Page
+    Input Username    demo
+    Input Password    mode
+    Submit Credentials
+    Welcome Page Should Be Open
+    [Teardown]    Close Browser
+
+*** Keywords ***
+Open Browser To Login Page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Title Should Be    Login Page
+
+Input Username
+    [Arguments]    ${username}
+    Input Text    username_field    ${username}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    password_field    ${password}
+
+Submit Credentials
+    Click Button    login_button
+
+Welcome Page Should Be Open
+    Title Should Be    Welcome Page
+</pre><h2><strong><a name=usecase></a>Use Case &#8211; Web Testing With Robot Framework And Selenium Library</strong></h2><p style="text-align: justify;">In this example, we are going to make the following directories.</p><ol><li><p style="text-align: justify;">application &#8211; it is a simple login application with a login page, welcome page, and an error page.</p></li><li><p style="text-align: justify;">tests &#8211; This will have all the test cases.</p></li><li><p style="text-align: justify;">tasks &#8211; This will have the tasks.</p></li></ol><p><strong>Application</strong></p><p><strong>HTML</strong></p><ul><li><strong>index.html</strong></li></ul><pre class="brush: xml; title: ; notranslate" title>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Login Page&lt;/title&gt;
+  &lt;link href=&quot;demo.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+  &lt;img src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-wp-preserve=&quot;%3Cscript%20type%3D%22text%2Fjavascript%22%3E%0A%20%20%20%20%20%20%20function%20login(username%2Cpassword)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20(username%3D%3D%22demo%22%20%26%26%20password%3D%3D%20%22mode%22)%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.location%20%3D%20%22welcome.html%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7Delse%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20window.location%20%3D%20%22error.html%22%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%7D%0A%3C%2Fscript%3E&quot; data-mce-resize=&quot;false&quot; data-mce-placeholder=&quot;1&quot; class=&quot;mce-object&quot; width=&quot;20&quot; height=&quot;20&quot; alt=&quot;&amp;lt;script&amp;gt;&quot; title=&quot;&amp;lt;script&amp;gt;&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+
+&lt;h1&gt;Login Page&lt;/h1&gt;
+
+
+
+Please input your user name and password and click the login button
+
+
+&lt;form name=&quot;login_form&quot; onsubmit=&quot;login(this.username_field.value, this.password_field.value); return false;&quot;&gt;
+
+&lt;table&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;&lt;label for=&quot;username_field&quot;&gt;User Name:&lt;/label&gt;&lt;/td&gt;
+
+
+&lt;td&gt;&lt;input id=&quot;username_field&quot; size=&quot;30&quot; type=&quot;text&quot;&gt;&lt;/td&gt;
+
+          &lt;/tr&gt;
+
+
+&lt;tr&gt;
+
+&lt;td&gt;&lt;label for=&quot;password_field&quot;&gt;Password:&lt;/label&gt;&lt;/td&gt;
+
+
+&lt;td&gt;&lt;input id=&quot;password_field&quot; size=&quot;30&quot; type=&quot;password&quot;&gt;&lt;/td&gt;
+
+          &lt;/tr&gt;
+
+
+&lt;tr&gt;
+
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+
+
+&lt;td&gt;&lt;input id=&quot;login_button&quot; type=&quot;submit&quot; value=&quot;LOGIN&quot;&gt;&lt;/td&gt;
+
+          &lt;/tr&gt;
+
+        &lt;/table&gt;
+
+      &lt;/form&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre><ul><li><strong>welcome.html</strong></li></ul><pre class="brush: xml; title: ; notranslate" title>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Welcome Page&lt;/title&gt;
+  &lt;link href=&quot;demo.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id='container'&gt;
+
+&lt;h1&gt;Welcome Page&lt;/h1&gt;
+
+
+
+Login succeeded. Now you can &lt;a href=&quot;.&quot;&gt;logout&lt;/a&gt;.
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre><ul><li><strong>error.html</strong></li></ul><pre class="brush: xml; title: ; notranslate" title>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Error Page&lt;/title&gt;
+  &lt;link href=&quot;demo.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+
+&lt;h1&gt;Error Page&lt;/h1&gt;
+
+
+
+Login failed. Invalid user name and/or password.
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><ul><li><strong>demo.css</strong></li></ul><pre class="brush: css; title: ; notranslate" title>
+body {
+    font-family: sans-serif;
+    color: black;
+    background: #DDDDDD;
+}
+#container {
+    width: 30em;
+    height: 15em;
+    margin: 5em auto;
+    background: white;
+    border: 1px solid gray;
+    padding: 0.5em 2em;
+}
+
+</pre><ul><li><strong>server.py</strong></li></ul><pre class="brush: python; title: ; notranslate" title>
+from __future__ import print_function
+
+from os import chdir
+from os.path import abspath, dirname, join
+try:
+    from SocketServer import ThreadingMixIn
+    from BaseHTTPServer import HTTPServer
+    from SimpleHTTPServer import SimpleHTTPRequestHandler
+except ImportError:
+    from socketserver import ThreadingMixIn
+    from http.server import SimpleHTTPRequestHandler, HTTPServer
+
+
+ROOT = join(dirname(abspath(__file__)), 'html')
+PORT = 7272
+
+
+class DemoServer(ThreadingMixIn, HTTPServer):
+    allow_reuse_address = True
+
+    def __init__(self, port=PORT):
+        HTTPServer.__init__(self, ('localhost', int(port)),
+                            SimpleHTTPRequestHandler)
+
+    def serve(self, directory=ROOT):
+        chdir(directory)
+        print('Demo server starting on port %d.' % self.server_address[1])
+        try:
+            server.serve_forever()
+        except KeyboardInterrupt:
+            server.server_close()
+        print('Demo server stopped.')
+
+
+if __name__ == '__main__':
+    import sys
+    try:
+        server = DemoServer(*sys.argv[1:])
+    except (TypeError, ValueError):
+        print(__doc__)
+    else:
+        server.serve()
+
+</pre><p><strong>Tests</strong></p><ul><li><strong>valid_login.robot</strong></li></ul><pre class="brush: plain; title: ; notranslate" title>
+*** Settings ***
+Documentation     A test suite with a single test for valid login.
+...
+...               This test has a workflow that is created using keywords in
+...               the imported resource file.
+Resource          resource.robot
+
+*** Test Cases ***
+Valid Login
+    Open Browser To Login Page
+    Input Username    demo
+    Input Password    mode
+    Submit Credentials
+    Welcome Page Should Be Open
+    [Teardown]    Close Browser
+
+</pre><ul><li><strong>invalid_login.robot</strong><pre class="brush: plain; title: ; notranslate" title>*** Settings ***
+Documentation     A test suite containing tests related to invalid login.
+...
+...               These tests are data-driven by their nature. They use a single
+...               keyword, specified with Test Template setting, that is called
+...               with different arguments to cover different scenarios.
+...
+...               This suite also demonstrates using setups and teardowns in
+...               different levels.
+Suite Setup       Open Browser To Login Page
+Suite Teardown    Close Browser
+Test Setup        Go To Login Page
+Test Template     Login With Invalid Credentials Should Fail
+Resource          resource.robot
+
+*** Test Cases ***               USER NAME        PASSWORD
+Invalid Username                 invalid          ${VALID PASSWORD}
+Invalid Password                 ${VALID USER}    invalid
+Invalid Username And Password    invalid          whatever
+Empty Username                   ${EMPTY}         ${VALID PASSWORD}
+Empty Password                   ${VALID USER}    ${EMPTY}
+Empty Username And Password      ${EMPTY}         ${EMPTY}
+
+*** Keywords ***
+Login With Invalid Credentials Should Fail
+    [Arguments]    ${username}    ${password}
+    Input Username    ${username}
+    Input Password    ${password}
+    Submit Credentials
+    Login Should Have Failed
+
+Login Should Have Failed
+    Location Should Be    ${ERROR URL}
+    Title Should Be    Error Page
+</pre></li><li><strong>resource.robot</strong><pre class="brush: plain; title: ; notranslate" title>*** Settings ***
+Documentation     A resource file with reusable keywords and variables.
+...
+...               The system specific keywords created here form our own
+...               domain specific language. They utilize keywords provided
+...               by the imported SeleniumLibrary.
+Library           SeleniumLibrary
+
+*** Variables ***
+${SERVER}         localhost:7272
+${BROWSER}        Firefox
+${DELAY}          0
+${VALID USER}     demo
+${VALID PASSWORD}    mode
+${LOGIN URL}      http://${SERVER}/
+${WELCOME URL}    http://${SERVER}/welcome.html
+${ERROR URL}      http://${SERVER}/error.html
+
+*** Keywords ***
+Open Browser To Login Page
+    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Maximize Browser Window
+    Set Selenium Speed    ${DELAY}
+    Login Page Should Be Open
+
+Login Page Should Be Open
+    Title Should Be    Login Page
+
+Go To Login Page
+    Go To    ${LOGIN URL}
+    Login Page Should Be Open
+
+Input Username
+    [Arguments]    ${username}
+    Input Text    username_field    ${username}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text    password_field    ${password}
+
+Submit Credentials
+    Click Button    login_button
+
+Welcome Page Should Be Open
+    Location Should Be    ${WELCOME URL}
+    Title Should Be    Welcome Page
+</pre></li><li><strong>gherkin_login.robot</strong></li></ul><pre class="brush: plain; title: ; notranslate" title>
+*** Settings ***
+Documentation     A test suite with a single Gherkin style test.
+...
+...               This test is functionally identical to the example in
+...               valid_login.robot file.
+Resource          resource.robot
+Test Teardown     Close Browser
+
+*** Test Cases ***
+Valid Login
+    Given browser is opened to login page
+    When user "demo" logs in with password "mode"
+    Then welcome page should be open
+
+*** Keywords ***
+Browser is opened to login page
+    Open browser to login page
+
+User "${username}" logs in with password "${password}"
+    Input username    ${username}
+    Input password    ${password}
+    Submit credentials
+
+</pre><p><strong>tasks.py</strong></p><pre class="brush: python; title: ; notranslate" title>
+from pathlib import Path
+import shutil
+
+from docutils.core import publish_cmdline
+from invoke import task
+from rellu.tasks import clean
+
+
+assert Path.cwd() == Path(__file__).parent
+
+@task
+def project_docs(ctx):
+    """Generate project documentation.
+
+    These docs are visible at http://robotframework.org/WebDemo/.
+    """
+    args = ['--stylesheet=style.css,extra.css',
+            '--link-stylesheet',
+            'README.rst',
+            'docs/index.html']
+    publish_cmdline(writer_name='html5', argv=args)
+    print(Path(args[-1]).absolute())
+
+@task
+def move_docs(ctx):
+    """Move report.html and log.html to docs
+
+    These docs are visible http://robotframework.org/WebDemo/.
+    """
+    log = Path('./log.html')
+    report = Path('./report.html')
+    dest = Path('.') / 'docs'
+    print(log.absolute())
+    shutil.copy(log.absolute(), str(dest))
+    print(report.absolute())
+    shutil.copy(report.absolute(), str(dest))
+
+</pre><p>To run our application, simply run the server.py file, and the login page will open at <strong>https//:localhost:7272</strong></p><p><img class="aligncenter wp-image-118597 size-full  blur-up lazyloaded" src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login.png" data-src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login.png" alt="" width="588" height="310" data-srcset="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login.png 588w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-150x79.png 150w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-300x158.png 300w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-528x278.png 528w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-341x180.png 341w" data-sizes="(max-width: 588px) 100vw, 588px" sizes="(max-width: 588px) 100vw, 588px" srcset="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login.png 588w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-150x79.png 150w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-300x158.png 300w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-528x278.png 528w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/login-341x180.png 341w"></p><p>When the demo is running, you can execute the tests, using the command</p><pre class="brush: plain; title: ; notranslate" title>
+robot tests
+</pre><p>After running the tests, you will get a report and log files in an HTML format.</p><p><strong>report.html</strong></p><p><strong><img class="aligncenter wp-image-118653 size-full  lazyload blur-up " src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-src=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/report.png alt width=1366 height=725 data-srcset="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/report.png 1366w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/report-150x80.png 150w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/report-300x159.png 300w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/report-768x408.png 768w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/report-528x280.png 528w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/report-339x180.png 339w" data-sizes="(max-width: 1366px) 100vw, 1366px">log.html</strong></p><p style="text-align: justify;"><span><img class="aligncenter wp-image-118654 size-full  lazyload blur-up " src="data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-src=https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/log.png alt width=1366 height=727 data-srcset="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/log.png 1366w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/log-150x80.png 150w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/log-300x160.png 300w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/log-768x409.png 768w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/log-528x281.png 528w, https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2019/10/log-338x180.png 338w" data-sizes="(max-width: 1366px) 100vw, 1366px"></span></p><p style="text-align: justify;"><span>This brings us to the end of this article where we have learned how we can use robot framework in python with seleniumlibrary to perform web testing on a login page. I hope you are clear with all that has been shared with you in this tutorial.</span></p><p style="text-align: justify;"><em>If you found this article on &ldquo;Robot Framework In Python&rdquo; relevant, check out the<span>&nbsp;</span>
+</body>
+</html>
