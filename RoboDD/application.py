@@ -3,7 +3,6 @@
 
 Used for robot framework online exercising.
 
-:copyright: Nokia Networks
 :author: Daniel Draus
 :contact: daniel.draus@interia.pl
 """
