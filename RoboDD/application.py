@@ -5,7 +5,7 @@ Used for robot framework online exercising.
 
 :copyright: Nokia Networks
 :author: Daniel Draus
-:contact: daniel.draus@nokia.com
+:contact: daniel.draus@interia.pl
 """
 import shutil
 import robot
